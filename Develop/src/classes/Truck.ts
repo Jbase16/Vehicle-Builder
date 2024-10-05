@@ -42,6 +42,10 @@ class Truck extends Vehicle {
     this.topSpeed = topSpeed;
     this.wheels = wheels;
     this.towingCapacity = towingCapacity;
+
+    
+
+
   }
 
   // implement the tow method
