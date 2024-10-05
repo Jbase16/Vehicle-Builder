@@ -43,8 +43,9 @@ class Truck extends Vehicle {
     this.wheels = wheels;
     this.towingCapacity = towingCapacity;
 
-    // Check if wheels array has 4 elements, and create 4 new default Wheel objects if it does not
-    if (w)
+    
+
+
   }
 
   // implement the tow method
