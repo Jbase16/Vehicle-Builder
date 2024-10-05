@@ -1,13 +1,13 @@
 // Importing Vehicle and Wheel classes
-import Vehicle from './Vehicle.js';
-import Wheel from './Wheel.js';
+import Vehicle from "./Vehicle.js";
+import Wheel from "./Wheel.js";
 
 // Car class that extends Vehicle class
 class Car extends Vehicle {
   // Declare properties of the Car class
   vin: string;
   color: string;
- override make: string;
+  override make: string;
   override model: string;
   year: number;
   override weight: number;
