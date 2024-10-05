@@ -49,6 +49,10 @@ class Motorbike extends Vehicle {
 
   }
 
+  export default Motorbike;
+
+  
+
   
   
   

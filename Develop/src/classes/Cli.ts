@@ -52,6 +52,51 @@ class Cli {
       });
   }
 
+  performActions(): void {
+    inquirer
+    .prompt([
+      type: 'list',
+        name: 'action',
+        message: 'Select an action',
+        choices: [
+          'Print details',
+          'Start vehicle',
+          'Accelerate 5 MPH',
+          'Decelerate 5 MPH',
+          'Stop vehicle',
+          'Turn right',
+          'Turn left',
+          'Reverse',
+          'Tow vehicle',
+          'Do a wheelie',
+          'Select or create another vehicle',
+          'Exit',
+        ],
+      },
+    ])
+    .then((answers) => {
+      // perform the selected action
+      if (answers.action === 'Tow vehicle ') {
+        // check if the vehicle is a truck
+        if (this.vehicle instanceof Truck) {
+          // prompt the user to select a vehicle to tow
+          this.selectVehicleToTow();
+        } else {
+          console.log('Only trucks can tow vehicles');
+        }
+      } else if (answers.action === 'Do a wheelie') {
+        // check if the vehicle is a motorbike
+        if (this.vehicle instanceof Motorbike) {
+          // perform the wheelie action
+          this.vehicle.wheelie();
+        } else {
+          console.log('Only motorbikes can do wheelies');
+        }
+      }
+    });
+}
+
+
   // method to create a vehicle
 createVehicle(): void {
   inquirer
