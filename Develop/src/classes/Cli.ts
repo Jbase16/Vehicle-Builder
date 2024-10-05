@@ -53,10 +53,6 @@ class Cli {
   }
 
   // method to create a vehicle
- typescript
-Edit
-Copy code
-// method to create a vehicle
 createVehicle(): void {
   inquirer
     .prompt([
