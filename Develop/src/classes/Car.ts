@@ -7,10 +7,10 @@ class Car extends Vehicle {
   // Declare properties of the Car class
   vin: string;
   color: string;
-  make: string;
-  model: string;
+ override make: string;
+  override model: string;
   year: number;
-  weight: number;
+  override weight: number;
   topSpeed: number;
   wheels: Wheel[];
 
