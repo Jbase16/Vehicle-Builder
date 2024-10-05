@@ -3,7 +3,19 @@ import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
 
 // TODO: The Motorbike class should extend the Vehicle class
-class Motorbike {
+
+class Motorbike extends Vehicle {
+
+  vin: string;
+  color: string;
+  make: string:
+  model: string;
+  year: number;
+  weight: number;
+  topSpeed: number;
+  wheels: Wheel [];
+  
+  
   // TODO: Declare properties of the Motorbike class
   // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
   // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
