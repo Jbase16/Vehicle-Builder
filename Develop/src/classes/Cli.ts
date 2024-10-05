@@ -80,8 +80,8 @@ createVehicle(): void {
       }
     });
 }
-      });
-  }
+    
+  
 
   // method to create a car
   createCar(): void {
