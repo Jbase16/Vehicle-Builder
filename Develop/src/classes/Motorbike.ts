@@ -11,7 +11,7 @@ class Motorbike extends Vehicle {
 
   vin: string;
   color: string;
-  make: string:
+  make: string;
   model: string;
   year: number;
   weight: number;
@@ -45,14 +45,14 @@ class Motorbike extends Vehicle {
     this.wheels = [new Wheel(), new Wheel()];
   }
 
-  wheelie(): void {
-    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie`);
+  this.wheelie();
+  console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie`);
+
+
+    }
+  
   }
-
-
-  }
-
-  export default Motorbike;
+  
 
 
 
@@ -75,7 +75,7 @@ class Motorbike extends Vehicle {
   // TODO: The method should call the printDetails method of the parent class
   // TODO: The method should log the details of the Motorbike
   // TODO: The details should include the VIN, make, model, year, weight, top speed, color, and wheels
-}
+
 
 // Export the Motorbike class as the default export
 export default Motorbike;

@@ -80,7 +80,7 @@ class Truck extends Vehicle {
     // TODO: The method should call the printDetails method of the parent class
     // TODO: The method should log the details of the Truck
     // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
-}
+
 
 // Export the Truck class as the default export
 export default Truck;
