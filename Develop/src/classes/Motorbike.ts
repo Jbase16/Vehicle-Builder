@@ -6,7 +6,7 @@ import Wheel from './Wheel.js';
 
 class Motorbike extends Vehicle {
   wheelie() {
-    throw new Error("Method not implemented.");
+    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`);
   }
 
   vin: string;
@@ -39,27 +39,16 @@ class Motorbike extends Vehicle {
     this.wheels = wheels;
 
     if (wheels.length === 2) {
-    this.wheels = wheels;
-  } else {
-    // Create 2 new default Wheel objects if it does not
-    this.wheels = [new Wheel(), new Wheel()];
-  }
-
-  this.wheelie();
-  console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie`);
-
-
+      this.wheels = wheels;
+    } else {
+      // Create 2 new default Wheel objects if it does not
+      this.wheels = [new Wheel(), new Wheel()];
     }
-  
+
+    this.wheelie();
+    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie`);
   }
-  
-
-
-
-  
-  
-  
-  
+}
 
 // Export the Motorbike class as the default export
 export default Motorbike;
