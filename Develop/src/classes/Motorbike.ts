@@ -1,6 +1,6 @@
 // Importing Vehicle and Wheel classes
-import Vehicle from './Vehicle.js';
-import Wheel from './Wheel.js';
+import Vehicle from "./Vehicle.js";
+import Wheel from "./Wheel.js";
 
 // TODO: The Motorbike class should extend the Vehicle class
 
@@ -16,7 +16,7 @@ class Motorbike extends Vehicle {
   year: number;
   override weight: number;
   topSpeed: number;
-  wheels: Wheel [];
+  wheels: Wheel[];
 
   constructor(
     vin: string,
