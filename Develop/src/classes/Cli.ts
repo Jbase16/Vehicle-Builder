@@ -271,14 +271,17 @@ class Cli {
           name: 'CreateOrSelect',
           message:
             'Would you like to create a new vehicle or test out an older one?',
-          choices: ['Create a New Vehicle', 'Drive Existing One'],
+          choices: ['Create a New Vehicle', 'Drive Existing One', 'Exit'], // Add Exit option here
         },
       ])
       .then((answers) => {
         if (answers.CreateOrSelect === 'Create a New Vehicle') {
           this.createVehicle();
-        } else {
+        } else if (answers.CreateOrSelect === 'Drive Existing One') {
           this.chooseVehicle();
+        } else if (answers.CreateOrSelect === 'Exit') {
+          this.exit = true;
+          console.log('Exiting the application...');
         }
       });
   }
