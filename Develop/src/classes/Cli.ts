@@ -1,11 +1,9 @@
-// importing classes from other files
 import inquirer from "inquirer";
 import Truck from "./Truck.js";
 import Car from "./Car.js";
 import Motorbike from "./Motorbike.js";
 import Wheel from "./Wheel.js";
 
-// define the Cli class
 class Cli {
   vehicles: (Car | Truck | Motorbike)[];
   selectedVehicleVin: string | undefined;
@@ -15,7 +13,6 @@ class Cli {
     this.vehicles = vehicles;
   }
 
-  // static method to generate a vin
   static generateVin(): string {
     return (
       Math.random().toString(36).substring(2, 15) +
@@ -23,7 +20,6 @@ class Cli {
     );
   }
 
-  // method to choose a vehicle from existing vehicles
   chooseVehicle(): void {
     inquirer
       .prompt([
@@ -43,8 +39,9 @@ class Cli {
       });
   }
 
-  // method to perform actions on a vehicle
   performActions(): void {
+    if (this.exit) return; // Check if exit is true before proceeding
+
     inquirer
       .prompt([
         {
@@ -116,7 +113,8 @@ class Cli {
             return;
           case 'Exit':
             this.exit = true;
-            break;
+            console.log('Exiting the application...');
+            return;
         }
 
         if (!this.exit) {
@@ -125,7 +123,6 @@ class Cli {
       });
   }
 
-  // method to create a vehicle
   createVehicle(): void {
     inquirer
       .prompt([
@@ -151,7 +148,6 @@ class Cli {
       });
   }
 
-  // method to create a car
   createCar(): void {
     inquirer
       .prompt([
@@ -179,7 +175,6 @@ class Cli {
       });
   }
 
-  // method to create a truck
   createTruck(): void {
     inquirer
       .prompt([
@@ -209,7 +204,6 @@ class Cli {
       });
   }
 
-  // method to create a motorbike
   createMotorbike(): void {
     inquirer
       .prompt([
@@ -244,7 +238,6 @@ class Cli {
       });
   }
 
-  // method to find a vehicle to tow
   findVehicleToTow(truck: Truck): void {
     inquirer
       .prompt([
@@ -268,8 +261,9 @@ class Cli {
       });
   }
 
-  // method to start the cli
   startCli(): void {
+    if (this.exit) return; // Check if exit is true before starting
+
     inquirer
       .prompt([
         {
@@ -290,5 +284,4 @@ class Cli {
   }
 }
 
-// export the Cli class
 export default Cli;
