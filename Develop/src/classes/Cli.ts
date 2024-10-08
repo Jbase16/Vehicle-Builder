@@ -276,12 +276,12 @@ class Cli {
           type: 'list',
           name: 'CreateOrSelect',
           message:
-            'Would you like to create a new vehicle or perform an action on an existing vehicle?',
-          choices: ['Create a new vehicle', 'Select an existing vehicle'],
+            'Would you like to create a new vehicle or test out an older one?',
+          choices: ['Create a New Vehicle', 'Drive Existing One'],
         },
       ])
       .then((answers) => {
-        if (answers.CreateOrSelect === 'Create a new vehicle') {
+        if (answers.CreateOrSelect === 'Create a New Vehicle') {
           this.createVehicle();
         } else {
           this.chooseVehicle();
