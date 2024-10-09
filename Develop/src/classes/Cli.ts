@@ -25,16 +25,18 @@ class Cli {
       .prompt([
         {
           type: 'list',
-          name: 'selectedVehicleVin',
+          name: 'selectedVehicle', // Change this to 'selectedVehicle'
           message: 'Select a vehicle to perform an action on',
           choices: this.vehicles.map((vehicle) => ({
-            name: `${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`,
-            value: vehicle.vin,
+            name: `${vehicle.make} -- ${vehicle.make} ${vehicle.model}`,
+            value: vehicle,
           })),
         },
       ])
       .then((answers) => {
-        this.selectedVehicleVin = answers.selectedVehicleVin;
+        const selectedVehicle = answers.selectedVehicle; // This will now correctly reference the selected vehicle
+        this.selectedVehicleVin = Cli.generateVin();
+        selectedVehicle.vin = this.selectedVehicleVin;
         this.performActions();
       });
   }

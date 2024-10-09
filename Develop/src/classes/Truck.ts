@@ -1,15 +1,12 @@
-
 import Vehicle from './Vehicle.js';
 import Motorbike from './Motorbike.js';
 import Car from './Car.js';
 import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
 
-
-
 class Truck extends Vehicle {
   // declare properties of the Truck class
-  vin: string;
+  override vin: string; // Add override keyword
   color: string;
   override make: string;
   override model: string;
@@ -60,10 +57,6 @@ class Truck extends Vehicle {
     }
   }
 }
-
-
-  
-  
 
 // Export the Truck class as the default export
 export default Truck;

@@ -9,6 +9,7 @@ class Vehicle implements Driveable {
   weight!: number;
   make: any;
   model: any;
+  vin?: string; // Mark vin as optional
 
   // Constructor for the Vehicle class
   constructor() {
@@ -18,6 +19,9 @@ class Vehicle implements Driveable {
 
   // Method to print vehicle details
   printDetails(): void {
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`VIN: ${this.vin}`);
     console.log(`Vehicle started: ${this.started}`);
     console.log(`Vehicle current speed: ${this.currentSpeed} mph`);
   }

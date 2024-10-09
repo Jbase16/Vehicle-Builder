@@ -2,14 +2,13 @@
 import Vehicle from "./Vehicle.js";
 import Wheel from "./Wheel.js";
 
-// TODO: The Motorbike class should extend the Vehicle class
-
+// Motorbike class extends the Vehicle class
 class Motorbike extends Vehicle {
   wheelie() {
     console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`);
   }
 
-  vin: string;
+  override vin: string; // Add override keyword
   color: string;
   override make: string;
   override model: string;
@@ -44,9 +43,6 @@ class Motorbike extends Vehicle {
       // Create 2 new default Wheel objects if it does not
       this.wheels = [new Wheel(), new Wheel()];
     }
-
-    this.wheelie();
-    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie`);
   }
 }
 

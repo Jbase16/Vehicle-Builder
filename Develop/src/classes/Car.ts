@@ -5,7 +5,7 @@ import Wheel from "./Wheel.js";
 // Car class that extends Vehicle class
 class Car extends Vehicle {
   // Declare properties of the Car class
-  vin: string;
+  override vin: string; // Add override keyword
   color: string;
   override make: string;
   override model: string;
